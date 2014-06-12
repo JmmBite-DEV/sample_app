@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  self.per_page = 10
+  
   before_create :create_remember_token
 
   has_secure_password
@@ -6,7 +8,7 @@ class User < ActiveRecord::Base
 
   # before_validation { self.email = email.downcase; self.name = name.downcase }
   before_validation { email.downcase!; name.downcase! }
-  validates :name, presence: true, length: { maximum: 16 }, uniqueness: true
+  validates :name, presence: true, length: { maximum: 32 }, uniqueness: true
   validates :email, presence: true, format: { with: /\A[\w+\-.]+@([a-z\b\-]+.){1,}[a-z]+\z/i}, uniqueness: true
 
   def User.new_remember_token

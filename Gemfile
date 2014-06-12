@@ -1,4 +1,5 @@
-source 'https://ruby.taobao.org'
+source 'http://rubygems.org'
+#source 'https://ruby.taobao.org'
 
 gem 'bootstrap-sass'
 gem 'bcrypt'
@@ -33,6 +34,7 @@ gem 'spring',        group: :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
+gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -40,3 +42,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'faker'
+
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'

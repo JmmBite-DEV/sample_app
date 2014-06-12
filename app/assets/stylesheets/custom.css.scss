@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 /* 全局变量 */
-$lightGray: #999;
+$grayLighter: #999;
 
 /* universal */
 html {
@@ -39,7 +39,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $lightGray;
+  color: $grayLighter;
 }
 p {
   font-size: 1.1em;
@@ -68,7 +68,7 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: $lightGray;
+  color: $grayLighter;
   a {
     color: #555;
     &:hover {
@@ -109,7 +109,7 @@ $grayMediumLight: #eaeaea;
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $lightGray;
+    border-top: 1px solid $grayLighter;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -155,4 +155,18 @@ input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+
+/* Users index */
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
 }
